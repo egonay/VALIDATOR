@@ -23,8 +23,8 @@ class DateTimeValidator extends DateTime
         return $datetime === $test;
     }
 
-    public static function isYear()
+    public static function isAbove($datetime, $test)
     {
-        return $today = getdate();
+        return $datetime > $test;
     }
 }
