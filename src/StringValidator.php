@@ -16,28 +16,26 @@ namespace Php\Validator;
 class StringValidator
 {
     /**
-     * @param $string
-     * @param $test
+     * @param string $string
+     * @param int $test
      * @return bool
      */
-    public static function length($string, $test)
-    {
+    public static function length($string, $test) {
         return strlen($string) === $test;
     }
 
     /**
-     * @param $string
-     * @param $test
+     * @param string $string
+     * @param int $test
      * @return bool
      */
-    public static function lengthIsMoreThan($string, $test)
-    {
+    public static function lengthIsMoreThan($string, $test) {
         return strlen($string) > $test;
     }
 
     /**
-     * @param $string
-     * @param $test
+     * @param string $string
+     * @param int $test
      * @return bool
      */
     public static function lengthIsLessThan($string, $test)
@@ -46,9 +44,9 @@ class StringValidator
     }
 
     /**
-     * @param $string
-     * @param $test
-     * @param $test2
+     * @param string $string
+     * @param int $test
+     * @param int $test2
      * @return bool
      */
     public static function lengthIsBetween($string, $test, $test2)
@@ -57,7 +55,7 @@ class StringValidator
     }
 
     /**
-     * @param $string
+     * @param string $string
      * @return bool
      */
     public static function noSpaceAtBeginningAndEnd($string)
@@ -67,7 +65,7 @@ class StringValidator
     }
 
     /**
-     * @param $string
+     * @param string $string
      * @return bool
      */
     public static function noSpaceAtAll($string)

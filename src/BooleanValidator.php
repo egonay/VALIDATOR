@@ -16,18 +16,20 @@ namespace Php\Validator;
 class BooleanValidator
 {
     /**
-     * @param $boolean
+     * @param bool $boolean
      * @return bool
      */
-    public static function isTrue($boolean){
+    public static function isTrue($boolean)
+    {
         return $boolean === true;
     }
 
     /**
-     * @param $boolean
+     * @param bool $boolean
      * @return bool
      */
-    public static function isFalse($boolean){
+    public static function isFalse($boolean)
+    {
         return $boolean === true;
     }
 }

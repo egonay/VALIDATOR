@@ -66,4 +66,42 @@ class DateTimeValidatorTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($result);
     }
+
+    public function testDateTimeValidatorIsLessTrue()
+    {
+        $test = "2014-03-14";
+        $datetime = "2014-02-26";
+        $result = DateTimeValidator::isLess($datetime, $test);
+
+        $this->assertTrue($result);
+    }
+
+    public function testDateTimeValidatorIsLessFalse()
+    {
+        $datetime = "2014-06-11";
+        $test = "2014-02-26";
+        $result = DateTimeValidator::isLess($datetime, $test);
+
+        $this->assertFalse($result);
+    }
+
+    public function testDateTimeValidatorIsBetweenTrue()
+    {
+        $datetime = "2014-03-14";
+        $test = "2014-02-26";
+        $test2 = "2014-07-22";
+        $result = DateTimeValidator::isBetween($datetime, $test, $test2);
+
+        $this->assertTrue($result);
+    }
+
+    public function testDateTimeValidatorIsBetweenFalse()
+    {
+        $datetime = "2014-09-11";
+        $test = "2014-02-26";
+        $test2 = "2014-07-22";
+        $result = DateTimeValidator::isBetween($datetime, $test, $test2);
+
+        $this->assertFalse($result);
+    }
 }
